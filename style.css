@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+:root{
+    --main-padding:20px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(213deg 44% 95%);
+    position: relative;
+}
+.page{
+    width: 70%;
+    height: 89%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+.parent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 50% 50%;
+    gap: 20px;
+    grid-template-areas: 
+    "one one two three"
+    "sec mid mid three";
+}
+.first{
+    background-color: hsl(263, 55%, 52%);
+    grid-area: one;
+    padding: var(--main-padding);
+    background-image: url(bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 358px;
+}
+
+.second{
+    background-color: hsl(217, 19%, 35%);
+    grid-area: two;
+    padding: var(--main-padding);
+}
+.third{
+    background-color: hsl(0, 0%, 100%);
+    grid-area: three;
+    padding: var(--main-padding);
+}
+.bot1{
+    background-color: hsl(0, 0%, 100%);
+    grid-area: sec;
+    padding: var(--main-padding);
+}
+.bot2{
+    background-color:hsl(219, 29%, 14%);
+    grid-area: mid;
+    padding: var(--main-padding);
+}
+
+.first , .second , .third , .bot1 , .bot2{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+/* All DIV heads & Span */
+.head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.head p{
+padding-left: 10px;
+color: hsl(0, 0%, 81%);
+}
+
+/* Paragraph handle */
+.bold{
+    font-weight: bold;
+    color: hsl(0, 0%, 81%);
+    font-size: 20px;
+}
+.bot1 .bold , .third .bold{
+    color: hsl(219, 29%, 14%); 
+}
+.content{
+    color:hsl(0, 0%, 81%) ;
+    opacity: 70%;
+}
+.bot1 .content , .third .content{
+    color:hsl(219, 29%, 14%) ;
+}
+.head span{
+    opacity: 50%;
+}
+.third .head p , .bot1 .head p{
+    color:hsl(219, 29%, 14%);  
+}
+.content{
+    line-height: 20px ;
+    letter-spacing: 1px;
+}
+
+/* image handle */
+img{
+    border: 1px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
